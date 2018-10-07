@@ -1,0 +1,8 @@
+<div>
+  <form>
+    <input type="text" name="command" [(ngModel)]="commandMessage.value">
+    <button type="button" (click)="sendCommand(commandMessage.value)">Send</button>
+  </form>
+{{commandMessage.value}}--
+</div>
+

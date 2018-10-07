@@ -1,0 +1,18 @@
+<div>
+  <div [style.width.px]="move.plateauWidth*100" [style.height.px]="move.plateauHeight*100" 
+      class="grid">
+    <div class="grid-item {{rover.direction}}" 
+      [style.left.px]="rover.posX*100" [style.bottom.px]="rover.posY*100"
+      *ngFor="let rover of move.viewData">
+      ^ {{rover.posX}}- {{rover.posY}}
+    </div>
+  </div>
+</div>
+<!-- 
+<div *ngFor="let data of move.viewData">
+  {{data | json}}---
+</div>
+-->
+<div *ngFor="let command of move.commandList">
+  {{command | json}}
+</div> 
